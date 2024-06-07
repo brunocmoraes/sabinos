@@ -1,0 +1,81 @@
+/* Webmor.com.br */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  @apply h-full antialiased;
+}
+
+body {
+  @apply text-pagetxt bg-pagebg bg-cover bg-fixed bg-center;
+  font-family: "Arimo", sans-serif;
+  background-image: url("images/bg.png");
+}
+
+#app {
+  @apply flex flex-col h-full px-7 md:px-0;
+}
+
+/* ------------------------------------- Header */
+.logo {
+  @apply text-center;
+}
+.logo-img {
+  width: 100%;
+  max-width: 220px;
+  display: inline-block;
+}
+
+.app-header {
+  @apply text-center mt-16;
+}
+
+.app-header h1 {
+  @apply text-xl font-bold;
+}
+
+.app-subtitle {
+  @apply opacity-80;
+}
+
+/* ------------------------------------- Main */
+.app-main {
+  @apply flex flex-1 flex-col justify-center align-middle;
+}
+
+/* ------------------------------------- Footer */
+.app-footer {
+  @apply text-xs text-center pb-5 mt-12;
+}
+
+/* ------------------------------------- Button */
+.btn {
+  @apply rounded-full block px-4 py-5 bg-primary text-white  text-center relative font-bold transition-all text-xs uppercase tracking-widest;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  @apply bg-secondary text-primary;
+}
+
+.btn i {
+  @apply absolute left-7 top-1/2 -translate-y-1/2 text-lg;
+}
+
+/* ------------------------------------- Sections */
+.section {
+  @apply w-full max-w-md mx-auto;
+}
+
+.section-buttons {
+  @apply my-6;
+}
+.section-social {
+  @apply text-center text-xl mt-3;
+}
+
+.section-buttons .btn {
+  @apply mb-5 last-of-type:mb-0;
+}
